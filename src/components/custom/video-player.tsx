@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 interface VideoPlayerProps {
   src: string;
   title: string;
@@ -11,14 +13,13 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   isShort = false,
   className,
 }) => {
-  const aspectRatio = isShort ? "9:16" : "16:9";
-  const [width, height] = aspectRatio.split(":").map(Number);
-  const ratio = (height / width) * 100;
-
   return (
     <div
-      className={`relative w-full overflow-hidden ${className ?? ""}`}
-      style={{ paddingTop: `${ratio}%` }}
+      className={cn(
+        "relative w-full overflow-hidden",
+        isShort ? "aspect-[9/16]" : "aspect-video",
+        className
+      )}
     >
       <iframe
         src={src}

@@ -1,31 +1,27 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { VideoPlayer } from "../video-player";
+import { projectData } from "@/data/project-data";
+import { ProjectCard } from "./project-card";
 
 export const ShowCase: React.FC = () => {
   return (
-    <div className="grid">
-      <Card>
-        <CardHeader>
-          <CardTitle>Resume Builder V2</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <VideoPlayer
-            src="https://www.youtube-nocookie.com/embed/vzwMjmTWf1A?si=nMU_z992mv7IwgLC"
-            title="YouTube video player"
+    <div
+      className="
+        columns-1
+        sm:columns-2
+        lg:columns-3
+        gap-4
+      "
+    >
+      {projectData.map((project, i) => (
+        <div key={i} className="mb-4 break-inside-avoid">
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            videoSrc={project.videoSrc}
+            isShort={project.isShort}
+            buttonLink={project.buttonLink}
           />
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
-      </Card>
+        </div>
+      ))}
     </div>
   );
 };
