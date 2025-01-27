@@ -1,3 +1,4 @@
+import { InfoSection } from "@/components/custom/home-page/info-section";
 import { IntroSection } from "@/components/custom/home-page/intro-section";
 import ShowCase from "@/components/custom/home-page/show-case";
 import { Separator } from "@radix-ui/react-separator";
@@ -19,6 +20,8 @@ const Home = () => (
       </h2>
       <ShowCase />
     </section>
+
+    <InfoSection />
   </main>
 );
 
