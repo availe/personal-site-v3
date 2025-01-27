@@ -54,11 +54,11 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {mainItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.title} className={isMobile ? "py-1" : ""}>
                   <SidebarMenuButton asChild>
                     <Link href={item.url} onClick={handleLinkClick}>
                       <item.icon />
-                      <span>{item.title}</span>
+                      <span className={isMobile ? "text-lg" : ""}>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -72,7 +72,7 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {socialItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.title} className={isMobile ? "py-1" : ""}>
                   <SidebarMenuButton asChild>
                     <a
                       href={item.url}
@@ -81,7 +81,7 @@ export function AppSidebar() {
                       onClick={handleLinkClick}
                     >
                       <item.icon />
-                      <span>{item.title}</span>
+                        <span className={isMobile ? "text-lg" : ""}>{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
