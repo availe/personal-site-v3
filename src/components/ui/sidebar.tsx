@@ -285,7 +285,7 @@ const SidebarTrigger = React.forwardRef<
       ref={ref}
       data-sidebar="outline"
       variant="link"
-      className="p-6"
+      className="p-6 sticky top-0 z-10"
       onClick={(event) => {
         onClick?.(event);
         toggleSidebar();
