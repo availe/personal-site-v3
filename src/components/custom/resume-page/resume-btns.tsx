@@ -9,7 +9,7 @@ const ResumeBtns = () => {
         rel="noopener noreferrer"
         className="w-full sm:w-1/3"
       >
-        <Button variant="outline" className="w-full">
+        <Button variant="secondary" className="w-full">
           Check out Resume Builder
         </Button>
       </a>
@@ -19,7 +19,7 @@ const ResumeBtns = () => {
         rel="noopener noreferrer"
         className="w-full sm:w-1/3"
       >
-        <Button variant="outline" className="w-full">
+        <Button variant="secondary" className="w-full">
           View in Full Page
         </Button>
       </a>
