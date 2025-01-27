@@ -27,7 +27,6 @@ export const projectData = [
     description: "Card Description",
     videoSrc: "https://www.youtube-nocookie.com/embed/zBSE9ReSBCI?si=nP8QfNgOyJ7YQOiL",
     isShort: false,
-    buttonLink: "https://example.com",
     weight: 2
   }
 ];
