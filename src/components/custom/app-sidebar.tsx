@@ -1,5 +1,7 @@
-"use client"
+"use client";
 
+import { FaHome, FaFileAlt, FaLinkedin, FaGithub } from "react-icons/fa";
+import Link from "next/link";
 import {
   Sidebar,
   SidebarContent,
@@ -10,64 +12,43 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarSeparator,
-} from "@/components/ui/sidebar"
-import {
-  FaHome,
-  // FaBlog,
-  FaFileAlt,
-  FaLinkedin,
-  FaGithub,
-} from "react-icons/fa"
-import { IconType } from "react-icons"
-import Link from "next/link"
+  useSidebar,
+} from "@/components/ui/sidebar";
 
-interface MenuItem {
-  title: string
-  url: string
-  icon: IconType
-  isExternal?: boolean
-}
+const mainItems = [
+  { title: "Home", url: "/", icon: FaHome },
+  { title: "Resume", url: "/resume", icon: FaFileAlt },
+];
 
-// Internal navigation links
-const mainItems: MenuItem[] = [
-  {
-    title: "Home",
-    url: "/",
-    icon: FaHome,
-  },
-  // {
-  //   title: "Blog",
-  //   url: "/blog",
-  //   icon: FaBlog,
-  // },
-  {
-    title: "Resume",
-    url: "/resume",
-    icon: FaFileAlt,
-  },
-]
-
-// Social media link
-const socialItems: MenuItem[] = [
+const socialItems = [
   {
     title: "LinkedIn",
-    url: "https://www.linkedin.com",
+    url: "https://www.linkedin.com/in/rafael-diaz1/",
     icon: FaLinkedin,
     isExternal: true,
   },
   {
     title: "GitHub",
-    url: "https://github.com",
+    url: "https://github.com/availe",
     icon: FaGithub,
     isExternal: true,
   },
-]
+];
 
 export function AppSidebar() {
+  const { setOpen, setOpenMobile, isMobile } = useSidebar();
+
+  const handleLinkClick = () => {
+    if (isMobile) {
+      setOpenMobile(false);
+    } else {
+      setOpen(true);
+    }
+  };
+
   return (
     <Sidebar>
       <SidebarContent>
-        {/* Main (internal) navigation */}
         <SidebarGroup>
           <SidebarGroupLabel>Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -75,7 +56,7 @@ export function AppSidebar() {
               {mainItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <Link href={item.url}>
+                    <Link href={item.url} onClick={handleLinkClick}>
                       <item.icon />
                       <span>{item.title}</span>
                     </Link>
@@ -85,23 +66,19 @@ export function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-
-        {/* Separator for spacing */}
         <SidebarSeparator className="my-2" />
-
-        {/* Social media links */}
         <SidebarGroup>
           <SidebarGroupLabel>Connect</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {socialItems
-            .map((item) => (
+              {socialItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <a
                       href={item.url}
                       target="_blank"
                       rel="noreferrer noopener"
+                      onClick={handleLinkClick}
                     >
                       <item.icon />
                       <span>{item.title}</span>
@@ -114,5 +91,5 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
-  )
+  );
 }
