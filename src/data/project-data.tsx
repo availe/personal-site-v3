@@ -27,5 +27,12 @@ export const projectData = [
     videoSrc: "https://www.youtube-nocookie.com/embed/zBSE9ReSBCI?si=nP8QfNgOyJ7YQOiL",
     isShort: false,
     weight: 2
+  },
+  {
+    title: "Escape V1",
+    description: "An incomplete desktop-only game built using the Godot Engine. Second iteration pending.",
+    videoSrc: "https://www.youtube-nocookie.com/embed/X70YIDxMLMc?si=-waO59bM2Hp6eaDJ",
+    isShort: false,
+    weight: -1
   }
 ];
