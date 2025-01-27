@@ -18,6 +18,8 @@ export const ShowCase: React.FC = () => {
     576: 1,
   };
 
+  const sortedData = [...projectData].sort((a, b) => a.weight - b.weight);
+
   return (
     <div className="w-full">
       <Masonry
@@ -27,7 +29,7 @@ export const ShowCase: React.FC = () => {
         // Adds gutter between columns and prevents background bleed
         columnClassName="pl-[16px] bg-clip-padding"
       >
-        {projectData.map((project, idx) => (
+        {sortedData.map((project, idx) => (
           <div key={idx} className="mb-[16px]">
             <ProjectCard
               title={project.title}
