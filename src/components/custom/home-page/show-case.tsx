@@ -9,7 +9,6 @@ const Masonry = dynamic(() => import("react-masonry-css"), {
 });
 
 export const ShowCase: React.FC = () => {
-  // Configure how many columns you want at various breakpoints
   const breakpointColumnsObj = {
     default: 3,
     1200: 3,
@@ -18,7 +17,7 @@ export const ShowCase: React.FC = () => {
     576: 1,
   };
 
-  const sortedData = [...projectData].sort((a, b) => a.weight - b.weight);
+  const sortedData = [...projectData].sort((a, b) => b.weight - a.weight);
 
   return (
     <div className="w-full">
