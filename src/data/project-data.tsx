@@ -23,16 +23,16 @@ export const projectData = [
     weight: 0
   },
   {
-    title: "Resume Builder V1",
-    description: "Fist iteration. Note it is no longer as functional as in the video, as the free API I was relying on appears to be rate limited now.",
-    videoSrc: "https://www.youtube-nocookie.com/embed/vrpMLB8Tme4?si=dtukp_VrW4s0TWyt",
+    title: "Assembly Counter",
+    description: "Built using a PIC18F452 Microcontroller and two 7 segment displays.",
+    videoSrc: "https://www.youtube-nocookie.com/embed/zBSE9ReSBCI?si=nP8QfNgOyJ7YQOiL",
     isShort: false,
     weight: 0
   },
   {
-    title: "Assembly Counter",
-    description: "Built using a PIC18F452 Microcontroller and two 7 segment displays.",
-    videoSrc: "https://www.youtube-nocookie.com/embed/zBSE9ReSBCI?si=nP8QfNgOyJ7YQOiL",
+    title: "Resume Builder V1",
+    description: "Fist iteration. Note it is no longer as functional as in the video, as the free API I was relying on appears to be rate limited now.",
+    videoSrc: "https://www.youtube-nocookie.com/embed/vrpMLB8Tme4?si=dtukp_VrW4s0TWyt",
     isShort: false,
     weight: 0
   },
