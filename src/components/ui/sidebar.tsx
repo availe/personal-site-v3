@@ -285,14 +285,16 @@ const SidebarTrigger = React.forwardRef<
       ref={ref}
       data-sidebar="outline"
       variant="link"
-      className="p-6 sticky top-0 z-10"
+      className="pt-6 sticky top-0 z-10"
       onClick={(event) => {
         onClick?.(event);
         toggleSidebar();
       }}
       {...props}
     >
-      <PanelLeftOpenIcon style={{ width: '24px !important', height: '24px !important' }} />
+      <PanelLeftOpenIcon
+        style={{ width: "24px !important", height: "24px !important" }}
+      />
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   );
@@ -484,14 +486,9 @@ const SidebarGroupAction = React.forwardRef<
   const Comp = asChild ? Slot : "button";
 
   const iconSizeClass =
-    size === "sm"
-      ? "w-3 h-3"
-      : size === "lg"
-      ? "w-5 h-5"
-      : "w-4 h-4";
+    size === "sm" ? "w-3 h-3" : size === "lg" ? "w-5 h-5" : "w-4 h-4";
 
-  const topClass =
-    size === "sm" ? "top-2" : size === "lg" ? "top-4" : "top-3";
+  const topClass = size === "sm" ? "top-2" : size === "lg" ? "top-4" : "top-3";
 
   return (
     <Comp
@@ -644,11 +641,7 @@ const SidebarMenuAction = React.forwardRef<
   const Comp = asChild ? Slot : "button";
 
   const topClass =
-    size === "sm"
-      ? "top-1"
-      : size === "lg"
-      ? "top-2.5"
-      : "top-1.5";
+    size === "sm" ? "top-1" : size === "lg" ? "top-2.5" : "top-1.5";
 
   return (
     <Comp
@@ -676,11 +669,7 @@ const SidebarMenuBadge = React.forwardRef<
   const { size } = useSidebar();
 
   const topClass =
-    size === "sm"
-      ? "top-1"
-      : size === "lg"
-      ? "top-2.5"
-      : "top-1.5";
+    size === "sm" ? "top-1" : size === "lg" ? "top-2.5" : "top-1.5";
 
   return (
     <div
@@ -711,15 +700,10 @@ const SidebarMenuSkeleton = React.forwardRef<
     return `${Math.floor(Math.random() * 40) + 50}%`;
   }, []);
 
-  const heightClass =
-    size === "sm" ? "h-7" : size === "lg" ? "h-12" : "h-8";
+  const heightClass = size === "sm" ? "h-7" : size === "lg" ? "h-12" : "h-8";
 
   const iconSize =
-    size === "sm"
-      ? "w-3 h-3"
-      : size === "lg"
-      ? "w-5 h-5"
-      : "w-4 h-4";
+    size === "sm" ? "w-3 h-3" : size === "lg" ? "w-5 h-5" : "w-4 h-4";
 
   return (
     <div
