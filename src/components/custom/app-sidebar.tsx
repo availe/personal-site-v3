@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/sidebar"
 import {
   FaHome,
-  FaBlog,
+  // FaBlog,
   FaFileAlt,
   FaLinkedin,
   FaGithub,
@@ -35,11 +35,11 @@ const mainItems: MenuItem[] = [
     url: "/",
     icon: FaHome,
   },
-  {
-    title: "Blog",
-    url: "/blog",
-    icon: FaBlog,
-  },
+  // {
+  //   title: "Blog",
+  //   url: "/blog",
+  //   icon: FaBlog,
+  // },
   {
     title: "Resume",
     url: "/resume",
