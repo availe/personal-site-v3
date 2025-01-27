@@ -1,5 +1,6 @@
 "use client";
 
+import ResumeBtns from "@/components/custom/resume-page/resume-btns";
 import { useState, useEffect, useRef } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -37,6 +38,10 @@ const Resume = () => {
 
   return (
     <div className="flex flex-col items-center w-full h-full p-4">
+      {/* Buttons */}
+      <ResumeBtns />
+
+      {/* Resume */}
       <div className="max-w-full w-full" ref={containerRef}>
         <Document
           file="/Rafael_Diaz_Resume.pdf"
