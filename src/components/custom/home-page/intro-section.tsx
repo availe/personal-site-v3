@@ -18,7 +18,7 @@ export const IntroSection = () => (
           View Resume
         </Button>
       </Link>
-      <Link href="/projects">
+      <Link href="https://www.linkedin.com/in/rafael-diaz1" target="_blank" rel="noopener noreferrer">
         <Button
           variant="outline"
           className="px-6 py-3 text-base hover:shadow-lg hover:bg-gray-200 transition-all"
