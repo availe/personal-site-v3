@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useState, useEffect } from "react";
 import { projectData } from "@/data/project-data";
 import { ProjectCard } from "./project-card";
 
@@ -8,7 +9,9 @@ const Masonry = dynamic(() => import("react-masonry-css"), {
   ssr: false,
 });
 
-export const ShowCase: React.FC = () => {
+export const ShowCase: React.FC<{ onLoaded?: () => void }> = ({ onLoaded }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   const breakpointColumnsObj = {
     default: 3,
     1200: 3,
@@ -19,13 +22,18 @@ export const ShowCase: React.FC = () => {
 
   const sortedData = [...projectData].sort((a, b) => b.weight - a.weight);
 
+  useEffect(() => {
+    if (!isLoaded) {
+      setIsLoaded(true);
+      onLoaded?.();
+    }
+  }, [isLoaded, onLoaded]);
+
   return (
     <div className="w-full">
       <Masonry
         breakpointCols={breakpointColumnsObj}
-        // Offsets column padding to ensure the first column aligns with the container edge
         className="flex w-auto ml-[-16px]"
-        // Adds gutter between columns and prevents background bleed
         columnClassName="pl-[16px] bg-clip-padding"
       >
         {sortedData.map((project, idx) => (
