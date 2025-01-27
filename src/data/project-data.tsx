@@ -5,7 +5,7 @@ export const projectData = [
     videoSrc: "https://www.youtube-nocookie.com/embed/vzwMjmTWf1A?si=PFeaD6tk0nRt1SNC",
     isShort: false,
     buttonLink: "https://resume-builder.availe.io",
-    weight: 3,
+    weight: 10,
   },
   {
     title: "C++ Snake",
@@ -31,8 +31,23 @@ export const projectData = [
   {
     title: "Escape V1",
     description: "An incomplete desktop-only game built using the Godot Engine. Second iteration pending.",
-    videoSrc: "https://www.youtube-nocookie.com/embed/X70YIDxMLMc?si=-waO59bM2Hp6eaDJ",
+    videoSrc: "https://www.youtube-nocookie.com/embed/eq_Bb9QNtw4?si=QDSsfhfsI4tfB2WL",
     isShort: false,
     weight: -1
+  },
+  {
+    title: "Expense Tracker",
+    description: "A class project built with JavaFX, SQLite, and Scene Builder.",
+    videoSrc: "https://www.youtube-nocookie.com/embed/5wQ7TdnjkiM?si=AcjFjVnqEm37sFl6",
+    isShort: false,
+    weight: -1
+  },
+  {
+    title: "SpyArb",
+    description: "I built only the frontend part of this project. Fun fact, the bearish, bullish, sideways are actually 3 separate lines.",
+    videoSrc: "  https://www.youtube-nocookie.com/embed/0sEuen0i8Q4?si=IpyQNHFif3WCWDc3",
+    isShort: false,
+    buttonLink: "https://spy-arbitrage-dashboard.vercel.app",
+    weight: 4
   }
 ];
