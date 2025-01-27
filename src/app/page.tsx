@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="w-full max-w-6xl mx-auto">
+    <div className="w-full md:px-12">
       {/* Hero Section */}
       <section className="pt-24 pb-6 px-4 flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-50 to-white">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-800">
