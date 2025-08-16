@@ -1,5 +1,13 @@
 export const projectData = [
-  {
+    {
+        title: "KReplica (Flagship Project)",
+        description: "Codegen tool to generate Kotlin CRUD DTO variants from a single interface.",
+        videoSrc: "https://www.youtube-nocookie.com/embed/Ci2poTeCDRw",
+        isShort: false,
+        buttonLink: "https://kreplica.availe.io",
+        weight: 0,
+    },
+    {
     title: "Resume Builder V2",
     description: "Second iteration. This time uses a client-side engine as to avoid rate limits. Note slow WiFi speeds may cause the engine to fail to load.",
     videoSrc: "https://www.youtube-nocookie.com/embed/vzwMjmTWf1A?si=PFeaD6tk0nRt1SNC",
