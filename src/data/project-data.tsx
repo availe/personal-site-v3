@@ -2,7 +2,7 @@ export const projectData = [
     {
         title: "KReplica (Flagship Project)",
         description: "Codegen tool to generate Kotlin CRUD DTO variants from a single interface.",
-        videoSrc: "https://www.youtube-nocookie.com/embed/Ci2poTeCDRw",
+        videoSrc: "https://www.youtube-nocookie.com/embed/aiAttKLRLC8",
         isShort: false,
         buttonLink: "https://kreplica.availe.io",
         weight: 0,
