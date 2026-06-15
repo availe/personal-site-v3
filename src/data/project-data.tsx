@@ -9,7 +9,7 @@ export const projectData = [
     },
     {
     title: "Resume Builder V2",
-    description: "Second iteration. This time uses a client-side engine as to avoid rate limits. Note slow WiFi speeds may cause the engine to fail to load.",
+    description: "Second iteration. This time uses a client-side engine as to avoid rate limits.",
     videoSrc: "https://www.youtube-nocookie.com/embed/vzwMjmTWf1A?si=PFeaD6tk0nRt1SNC",
     isShort: false,
     buttonLink: "https://resume-builder.availe.io",
